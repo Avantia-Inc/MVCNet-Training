@@ -209,6 +209,10 @@
     <Content Include="Areas\Admin\Views\Product\_List.cshtml" />
     <Content Include="Areas\Admin\Views\Product\_Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Product\_Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -240,7 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Online\Models\" />
     <Folder Include="Areas\Online\Views\Shared\" />
     <Folder Include="Controllers\" />
