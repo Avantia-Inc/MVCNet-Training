@@ -11,7 +11,7 @@ namespace MvcTraining.Web.Areas.Online.Controllers
         //
         // GET: /Online/Registration/
 
-        public ActionResult Index()
+		public ActionResult Register()
         {
             return View();
         }

@@ -131,11 +131,13 @@
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Models\Product.cs" />
     <Compile Include="Areas\Online\Controllers\RegistrationController.cs" />
+    <Compile Include="Areas\Online\Models\Customer.cs" />
     <Compile Include="Areas\Online\OnlineAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\MvcTrainingContext.cs" />
+    <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +215,8 @@
     <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Online\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Online\Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -246,6 +250,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Online\Models\" />
     <Folder Include="Areas\Online\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>

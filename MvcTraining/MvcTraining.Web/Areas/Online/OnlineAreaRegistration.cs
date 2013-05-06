@@ -15,6 +15,11 @@ namespace MvcTraining.Web.Areas.Online
 		public override void RegisterArea(AreaRegistrationContext context)
 		{
 			context.MapRoute(
+				"Online_registration",
+				"Online/register",
+				new { action = "Register", controller = "Registration" }
+			);
+			context.MapRoute(
 				"Online_default",
 				"Online/{controller}/{action}/{id}",
 				new { action = "Index", id = UrlParameter.Optional }
