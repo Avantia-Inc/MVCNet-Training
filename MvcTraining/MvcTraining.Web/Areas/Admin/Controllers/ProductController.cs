@@ -23,19 +23,6 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
         }
 
         //
-        // GET: /Admin/Product/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            Product product = db.Products.Find(id);
-            if (product == null)
-            {
-                return HttpNotFound();
-            }
-            return View(product);
-        }
-
-        //
         // GET: /Admin/Product/Create
 
         public ActionResult Create()
