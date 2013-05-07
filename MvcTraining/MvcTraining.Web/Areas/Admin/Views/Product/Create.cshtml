@@ -1,21 +1,25 @@
-﻿New Product
+﻿@model MvcTraining.Web.Areas.Admin.Models.Product
 
-<table border="1">
-    <tr>
-        <td>Name</td>
-        <td><input type="text" /></td>
-    </tr>
-    <tr>
-        <td>Category</td>
-        <td><input type="text" /></td>
-    </tr>
-    <tr>
-        <td>Description</td>
-        <td><input type="text" /></td>
-    </tr>
-    <tr>
-        <td>Weight</td>
-        <td><input type="text" /></td>
-    </tr>
-</table>
-<button>Save</button>
+New Product
+@using (Ajax.BeginForm("Create", new AjaxOptions() { HttpMethod = "Post" } ))
+{
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td>@Html.EditorFor(model => model.Name)</td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>@Html.EditorFor(model => model.Category)</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>@Html.EditorFor(model => model.Description)</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>@Html.EditorFor(model => model.Weight)</td>
+        </tr>
+    </table>
+    <button>Save</button>
+}

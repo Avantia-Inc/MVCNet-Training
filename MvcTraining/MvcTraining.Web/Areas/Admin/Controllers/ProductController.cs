@@ -34,7 +34,6 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
         // POST: /Admin/Product/Create
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(Product product)
         {
             if (ModelState.IsValid)
