@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using MvcTraining.Web.Areas.Admin.Models;
+using MvcTraining.Web.Areas.Online.Models;
 
 namespace MvcTraining.Web.Models
 {
@@ -19,5 +20,6 @@ namespace MvcTraining.Web.Models
         }
 
 		public DbSet<Product> Products { get; set; }
+		public DbSet<Customer> Customers { get; set; }
 	}
 }

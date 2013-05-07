@@ -14,4 +14,10 @@ namespace MvcTraining.Web.Models
 		 MinLength(6, ErrorMessage="Your password must be at least 6 characters long.")]
 		public string Password { get; set; }
 	}
+
+	public class UserLoginCreate : UserLogin
+	{
+		[Compare("Password", ErrorMessage="Confirmation password much match password.")]
+		public string ConfirmPassword { get; set; }
+	}
 }

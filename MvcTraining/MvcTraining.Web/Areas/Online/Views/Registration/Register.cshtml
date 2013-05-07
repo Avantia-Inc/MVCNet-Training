@@ -1,0 +1,16 @@
+﻿@model MvcTraining.Web.Areas.Online.Models.Customer
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+<section id="register-form">
+	@{ Html.RenderPartial("_CustomerContact"); }
+</section>
+
+@section scripts 
+{
+	@Scripts.Render("~/bundles/jqueryval")
+}
