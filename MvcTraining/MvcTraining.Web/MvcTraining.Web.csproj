@@ -212,6 +212,10 @@
     <Content Include="Areas\Admin\Views\Product\_List.cshtml" />
     <Content Include="Areas\Admin\Views\Product\_Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Product\_Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Online\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Online\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Online\Views\Registration\Register.cshtml" />
@@ -250,6 +254,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Online\Models\" />
+    <Folder Include="Areas\Online\Views\Shared\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
