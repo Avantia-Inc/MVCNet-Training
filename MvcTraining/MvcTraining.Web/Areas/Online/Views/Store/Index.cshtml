@@ -1,5 +1,35 @@
-﻿@{
+﻿@model IEnumerable<MvcTraining.Web.Areas.Admin.Models.Product>
+
+@{
     ViewBag.Title = "You'll Love our Products!";
 }
 
-<h2>You'll Love our Products!</h2>
+<section class="product-page">
+	<header>
+		<h2 class="store">You'll Love our Products!</h2>
+	</header>
+	
+@foreach (var product in Model)
+{
+	<article class="product">
+		<div class="left product-name">
+			<img width="95" height="115" src="http://placecage.com/g/95/115" />
+			@*<img width="65" height="75" src="http://placecage.com/g/65/75" />*@
+			<a href="#@product.Id">@product.Name</a>
+			<br />
+			@product.Description
+		</div>
+		<div class="right product-desc">
+			<strong>@product.Category</strong>
+			<br />
+			<strong>Weight:</strong>
+			@product.Weight
+		</div>
+	</article>
+}
+	<footer class="right clear">
+		<div>
+			<a href="#Cart">View Cart</a>
+		</div>
+	</footer>
+</section>
