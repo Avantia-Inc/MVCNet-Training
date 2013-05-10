@@ -223,6 +223,7 @@
     <Content Include="Areas\Online\Views\Registration\_CustomerAddresses.cshtml" />
     <Content Include="Areas\Online\Views\Registration\_CustomerPassword.cshtml" />
     <Content Include="Areas\Online\Views\Store\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\List.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -254,9 +255,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Online\Models\" />
-    <Folder Include="Areas\Online\Views\Shared\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>

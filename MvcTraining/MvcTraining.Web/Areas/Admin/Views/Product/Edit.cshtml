@@ -1,23 +1,26 @@
 ﻿@model MvcTraining.Web.Areas.Admin.Models.Product
 
 Edit Product
-
+@using (Ajax.BeginForm("Edit", new AjaxOptions() { HttpMethod = "Post", OnSuccess = "SaveSuccess", OnFailure = "SaveError" }))
+{
 <table border="1">
-    <tr>
-        <td>Name</td>
-        <td><input type="text" value="@Model.Name" /></td>
-    </tr>
-    <tr>
-        <td>Category</td>
-        <td><input type="text" value="@Model.Category" /></td>
-    </tr>
-    <tr>
-        <td>Description</td>
-        <td><input type="text" value="@Model.Description" /></td>
-    </tr>
-    <tr>
-        <td>Weight</td>
-        <td><input type="text" value="@Model.Weight" /></td>
-    </tr>
-</table>
-<button>Save</button>
+        <tr>
+            <td>Name</td>
+            <td>@Html.EditorFor(model => model.Name)</td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>@Html.EditorFor(model => model.Category)</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>@Html.EditorFor(model => model.Description)</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>@Html.EditorFor(model => model.Weight)</td>
+        </tr>
+    </table>    <button>Save</button>
+}
+@{ string prompt = "OK to delete " + Model.Name + "?";}
+@Ajax.ActionLink("Delete Product", "Delete", new { id = Model.Id }, new AjaxOptions() { HttpMethod = "Post", Confirm = prompt, OnSuccess = "Deleted", OnFailure = "DeleteFailed" } )

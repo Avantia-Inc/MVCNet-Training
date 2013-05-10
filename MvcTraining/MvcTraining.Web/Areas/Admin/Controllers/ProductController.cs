@@ -19,12 +19,19 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Products.ToList());
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult List()
+        {
+            return PartialView(db.Products.ToList());
         }
 
         //
         // GET: /Admin/Product/Create
 
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -40,15 +47,15 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
             {
                 db.Products.Add(product);
                 db.SaveChanges();
-                return RedirectToAction("Index");
             }
 
-            return View(product);
+            return RedirectToAction("Index");
         }
 
         //
         // GET: /Admin/Product/Edit/5
 
+        [HttpGet]
         public PartialViewResult Edit(int id = 0)
         {
             Product product = db.Products.Find(id);
@@ -63,42 +70,29 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
         // POST: /Admin/Product/Edit/5
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit(Product product)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
             }
-            return View(product);
+
+            return RedirectToAction("Index");
         }
 
         //
         // GET: /Admin/Product/Delete/5
 
-        public ActionResult Delete(int id = 0)
+        [HttpPost]
+        public void Delete(int id = 0)
         {
             Product product = db.Products.Find(id);
-            if (product == null)
+            if (product != null)
             {
-                return HttpNotFound();
+                db.Products.Remove(product);
+                db.SaveChanges();
             }
-            return View(product);
-        }
-
-        //
-        // POST: /Admin/Product/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Product product = db.Products.Find(id);
-            db.Products.Remove(product);
-            db.SaveChanges();
-            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

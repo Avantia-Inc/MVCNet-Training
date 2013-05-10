@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MvcTraining.Web.Areas.Admin.Models.Product>
+
+@using MvcTraining.Web.Areas.Admin.Models
+
+Existing Products
+<table border="1">
+    <tr>
+        <th>Product</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Weight</th>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="4">No Products Found!</td>
+        </tr>
+    }
+    else
+    {
+        foreach (Product product in Model)
+        {
+            <tr>
+                <td>@Ajax.ActionLink(product.Name, "Edit", new { id = product.Id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "editDiv" })</td>
+                <td>@product.Category</td>
+                <td>@product.Description</td>
+                <td>@product.Weight</td>
+            </tr>
+        }
+    }
+</table>

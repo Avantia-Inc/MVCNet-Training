@@ -1,31 +1,43 @@
-﻿@model IEnumerable<MvcTraining.Web.Areas.Admin.Models.Product>
-
-@using MvcTraining.Web.Areas.Admin.Models
-
-@{
+﻿@{
     ViewBag.Title = "Manage Products";
 }
 
 <h2>@ViewBag.Title</h2>
+<br /><br />
+
+@Ajax.ActionLink("New Product", "Create", new AjaxOptions { UpdateTargetId = "editDiv" })
+<br /><br />
 
 <div id="editDiv">
-@Html.Action("Create")
+    @Html.Action("Create")
 </div>
 <br /><br /><br />
 
-<table border="1">
-    @foreach (Product product in Model)
-    {
-        <tr>
-            <td>@Ajax.ActionLink(product.Name, "Edit", new { id = product.Id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "editDiv" })</td>
-            <td>@product.Category</td>
-            <td>@product.Description</td>
-            <td>@product.Weight</td>
-        </tr>
-    }
-</table>
+<div id="productList">
+    @Html.Action("List")
+</div>
 
 @section scripts
 {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        function SaveSuccess() {
+            alert('Product successfully saved');
+            window.location.reload();
+        }
+
+        function SaveError() {
+            alert('Unable to save product');
+        }
+
+        function Deleted() {
+            alert('Product successfully deleted');
+            window.location.reload();
+        }
+
+        function DeleteFailed() {
+            alert('Unable to delete product');
+        }
+    </script>
 }
