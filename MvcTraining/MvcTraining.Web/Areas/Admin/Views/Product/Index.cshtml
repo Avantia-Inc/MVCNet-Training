@@ -2,16 +2,6 @@
     ViewBag.Title = "Manage Products";
 }
 
-<script type="text/javascript">
-    function SaveSuccess() {
-        alert('Product successfully saved');
-    }
-
-    function SaveError() {
-        alert('Unable to save product');
-    }
-</script>
-
 <h2>@ViewBag.Title</h2>
 <br /><br />
 
@@ -30,4 +20,23 @@
 @section scripts
 {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        function SaveSuccess() {
+            alert('Product successfully saved');
+        }
+
+        function SaveError() {
+            alert('Unable to save product');
+        }
+
+        function Deleted() {
+            alert('Product successfully deleted');
+            window.location.reload();
+        }
+
+        function DeleteFailed() {
+            alert('Unable to delete product');
+        }
+    </script>
 }
