@@ -47,10 +47,9 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
             {
                 db.Products.Add(product);
                 db.SaveChanges();
-                return RedirectToAction("Create");
             }
 
-            return View(product);
+            return RedirectToAction("Index");
         }
 
         //
@@ -77,9 +76,9 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
             {
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
             }
-            return View(product);
+
+            return RedirectToAction("Index");
         }
 
         //
