@@ -1,8 +1,4 @@
-﻿@model IEnumerable<MvcTraining.Web.Areas.Admin.Models.Product>
-
-@using MvcTraining.Web.Areas.Admin.Models
-
-@{
+﻿@{
     ViewBag.Title = "Manage Products";
 }
 
@@ -13,17 +9,7 @@
 </div>
 <br /><br /><br />
 
-<table border="1">
-    @foreach (Product product in Model)
-    {
-        <tr>
-            <td>@Ajax.ActionLink(product.Name, "Edit", new { id = product.Id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "editDiv" })</td>
-            <td>@product.Category</td>
-            <td>@product.Description</td>
-            <td>@product.Weight</td>
-        </tr>
-    }
-</table>
+@Html.Action("List")
 
 @section scripts
 {

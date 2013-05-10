@@ -19,7 +19,12 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Products.ToList());
+            return View();
+        }
+
+        public ActionResult List()
+        {
+            return PartialView(db.Products.ToList());
         }
 
         //
@@ -40,7 +45,7 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
             {
                 db.Products.Add(product);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
             }
 
             return View(product);

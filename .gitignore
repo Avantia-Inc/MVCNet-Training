@@ -10,3 +10,4 @@ SQL/PSAS.SQL/sql
 SQL/PSAS.SQL/Sandbox
 *.SQL.dbmdl
 *.mdf
+*.ldf
