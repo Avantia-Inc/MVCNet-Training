@@ -2,14 +2,30 @@
     ViewBag.Title = "Manage Products";
 }
 
+<script type="text/javascript">
+    function SaveSuccess() {
+        alert('Product successfully saved');
+    }
+
+    function SaveError() {
+        alert('Unable to save product');
+    }
+</script>
+
 <h2>@ViewBag.Title</h2>
+<br /><br />
+
+@Ajax.ActionLink("New Product", "Create", new AjaxOptions { UpdateTargetId = "editDiv" })
+<br /><br />
 
 <div id="editDiv">
-@Html.Action("Create")
+    @Html.Action("Create")
 </div>
 <br /><br /><br />
 
-@Html.Action("List")
+<div id="productList">
+    @Html.Action("List")
+</div>
 
 @section scripts
 {

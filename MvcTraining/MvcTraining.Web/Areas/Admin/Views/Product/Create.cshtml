@@ -1,7 +1,7 @@
 ﻿@model MvcTraining.Web.Areas.Admin.Models.Product
 
 New Product
-@using (Ajax.BeginForm("Create", new AjaxOptions() { HttpMethod = "Post" } ))
+@using (Ajax.BeginForm("Create", new AjaxOptions() { HttpMethod = "Post", OnSuccess = "SaveSuccess", OnFailure = "SaveError" }))
 {
     <table border="1">
         <tr>
