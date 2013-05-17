@@ -56,12 +56,12 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
         // GET: /Admin/Product/Edit/5
 
         [HttpGet]
-        public PartialViewResult Edit(int id = 0)
+        public ActionResult Edit(int id = 0)
         {
             Product product = db.Products.Find(id);
             if (product == null)
             {
-                throw new Exception("Product not found");
+				return HttpNotFound();
             }
             return PartialView(product);
         }
