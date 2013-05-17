@@ -34,7 +34,7 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+			return PartialView();
         }
 
         //

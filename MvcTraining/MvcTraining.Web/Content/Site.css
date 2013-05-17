@@ -25,7 +25,7 @@ header {
 h2.store { text-align: center; }
 .left { text-align: left; }
 .right { text-align: right; }
-section.main { 
+section.main-wrapper { 
 	width: 750px;
 	padding: 5px 8px;
 	background-color:white;
@@ -160,7 +160,7 @@ textarea {
 		background-color: #ff6a00;
 	}
 
-	section.main { 
+	section.main-wrapper { 
 		margin: 0;
 		padding: 4px 8px;
 		background-color:white;
