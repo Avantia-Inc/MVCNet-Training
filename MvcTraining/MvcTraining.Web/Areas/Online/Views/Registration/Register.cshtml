@@ -3,11 +3,9 @@
 @{
     ViewBag.Title = "Register";
 }
-<section id="register-form" class="main-wrapper">
-	<h2>Register</h2>
+<h2>Register</h2>
 
-	@{ Html.RenderPartial("_CustomerContact"); }
-</section>
+<div id="register-form">@{ Html.RenderPartial("_CustomerContact"); }</div>
 
 @section scripts 
 {

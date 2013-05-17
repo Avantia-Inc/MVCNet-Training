@@ -134,6 +134,7 @@
     <Compile Include="Areas\Online\Controllers\StoreController.cs" />
     <Compile Include="Areas\Online\Models\Customer.cs" />
     <Compile Include="Areas\Online\OnlineAreaRegistration.cs" />
+    <Compile Include="Areas\Online\Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,6 +225,7 @@
     <Content Include="Areas\Online\Views\Registration\_CustomerPassword.cshtml" />
     <Content Include="Areas\Online\Views\Store\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Product\List.cshtml" />
+    <Content Include="Areas\Online\Views\Login\Index.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

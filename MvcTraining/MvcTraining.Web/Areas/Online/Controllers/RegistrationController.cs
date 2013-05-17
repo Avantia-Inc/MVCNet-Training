@@ -73,5 +73,19 @@ namespace MvcTraining.Web.Areas.Online.Controllers
 
 			return PartialView("_CustomerPassword", createLogin);
 		}
+
+		[ChildActionOnly]
+		public string GetCustomerName(string username)
+		{
+			Guid id = Guid.Empty;
+			if (Guid.TryParse(username, out id))
+			{
+				var customer = _context.Customers.FirstOrDefault(c => c.Id == id);
+				if (customer != null)
+					return string.Format("{0} {1}", customer.FirstName, customer.LastName);
+			}
+
+			return string.Empty;
+		}
     }
 }

@@ -4,7 +4,6 @@
     ViewBag.Title = "You'll Love our Products!";
 }
 
-<section class="main-wrapper">
 	<header>
 		<h2 class="store">You'll Love our Products!</h2>
 	</header>
@@ -28,8 +27,18 @@
 	</article>
 }
 	<footer class="right clear">
-		<div>
-			<a href="#Cart">View Cart</a>
+		<div> 
+			@if (Request.IsAuthenticated)
+			{  
+				@:Logged in as
+				Html.RenderAction("GetCustomerName", "Registration", new { username = User.Identity.Name });
+				@:|
+				@Html.ActionLink("Logout", "Logout", "Login")
+			}
+			else
+			{ 
+				@Html.ActionLink("Login", "Index", "Login")
+			}
+			| <a href="#Cart">View Cart</a>
 		</div>
 	</footer>
-</section>

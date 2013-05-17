@@ -8,7 +8,8 @@ namespace MvcTraining.Web.Models
 {
 	public class UserLogin
 	{
-		[Required(ErrorMessage="You must login with a valid email address")]
+		[Required(ErrorMessage="You must login with a valid email address"), 
+		 Display(Name="Email Address")]
 		public string Username { get; set; }
 		[Required(ErrorMessage="Please enter a password."),
 		 MinLength(6, ErrorMessage="Your password must be at least 6 characters long.")]
