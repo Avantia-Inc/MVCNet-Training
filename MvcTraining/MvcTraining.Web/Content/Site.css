@@ -6,7 +6,7 @@ body {
     background-color: #ff6a00;
 	margin:0;
 	padding:0;
-	padding-left: 50%;
+	padding-left: 50%;/**/
 	height:100%;
 }
 
@@ -25,7 +25,7 @@ header {
 h2.store { text-align: center; }
 .left { text-align: left; }
 .right { text-align: right; }
-section.product-page { 
+section.main { 
 	width: 750px;
 	padding: 5px 8px;
 	background-color:white;
@@ -160,7 +160,7 @@ textarea {
 		background-color: #ff6a00;
 	}
 
-	section.product-page { 
+	section.main { 
 		margin: 0;
 		padding: 4px 8px;
 		background-color:white;
