@@ -22,7 +22,7 @@ namespace MvcTraining.Web.Areas.Admin.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpGet, ChildActionOnly]
         public ActionResult List()
         {
             return PartialView(db.Products.ToList());
