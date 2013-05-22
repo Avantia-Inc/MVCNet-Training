@@ -23,4 +23,9 @@ Edit Product
     </table>    <button>Save</button>
 }
 @{ string prompt = "OK to delete " + Model.Name + "?";}
-@Ajax.ActionLink("Delete Product", "Delete", new { id = Model.Id }, new AjaxOptions() { HttpMethod = "Post", Confirm = prompt, OnSuccess = "Deleted", OnFailure = "DeleteFailed" } )
+
+@using (Ajax.BeginForm("Delete", new AjaxOptions() { HttpMethod = "Post", Confirm = prompt, OnSuccess = "Deleted", OnFailure = "DeleteFailed" }))
+{
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button>Delete</button>
+}
