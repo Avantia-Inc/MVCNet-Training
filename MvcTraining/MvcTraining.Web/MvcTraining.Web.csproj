@@ -135,6 +135,7 @@
     <Compile Include="Areas\Online\Models\Customer.cs" />
     <Compile Include="Areas\Online\OnlineAreaRegistration.cs" />
     <Compile Include="Areas\Online\Controllers\LoginController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -254,13 +255,24 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Slide1.cshtml" />
+    <Content Include="Views\Home\Slide2.cshtml" />
+    <Content Include="Views\Home\Slide3.cshtml" />
+    <Content Include="Views\Home\Slide4.cshtml" />
+    <Content Include="Views\Home\Slide5.cshtml" />
+    <Content Include="Views\Home\Slide6.cshtml" />
+    <Content Include="Views\Home\Slide7.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="CodeTemplates\AddView\CSHTML\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

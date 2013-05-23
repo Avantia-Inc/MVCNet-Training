@@ -1,0 +1,13 @@
+﻿@{
+	var ajaxOptions = new AjaxOptions() { UpdateTargetId = "mainArticle"};
+}
+
+<fieldset>
+	<legend>Demo: Registration</legend>
+
+
+</fieldset>
+<nav class="slides">
+	@Ajax.ActionLink("Next", "Slide7", null, ajaxOptions, new { @class = "floatRight" })
+	@Ajax.ActionLink("Back", "Slide5", null, ajaxOptions, new { @class = "floatLeft" })
+</nav>

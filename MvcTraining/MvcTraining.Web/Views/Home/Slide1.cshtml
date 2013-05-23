@@ -1,0 +1,52 @@
+﻿@{
+	var ajaxOptions = new AjaxOptions() { UpdateTargetId = "mainArticle"};
+}
+
+<fieldset>
+	<legend>MVC is a Technology Agnostic Pattern</legend>
+
+	<dl>
+		<dt>MVC</dt>
+		<dd>
+			The
+			<a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">
+				Model View Controller
+			</a>
+			pattern that allows for the separation of application data and rules (Model)
+			from the presentation of that data to users (View) through the use of a mediary (Controller).
+			<dl>
+				<dt>Model:</dt>
+				<dd>Layer responsible for application data, business rules and logic.</dd>
+				<dt>View:</dt>
+				<dd>Layer responsible for displaying data and capturing user input.</dd>
+				<dt>Controller:</dt>
+				<dd>
+					The controller binds the model and view together. The controller translates
+					user interaction from the view into commands executed within the model.
+				</dd>
+				<dt>
+					Related Patterns:
+				</dt>
+				<dd>
+					<ol>
+						<li>
+							MVP:
+							<a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter" target="_blank">Model View Presenter</a>
+							is a variation of MVC focused on user interfaces.
+						</li>
+						<li>
+							MVVM:
+							<a href="http://en.wikipedia.org/wiki/Model_View_ViewModel" target="_blank">Model View ViewModel</a>
+							specializes in supporting highly interactive UIs such as in HTML5 and Silverlight.
+						</li>
+					</ol>
+				</dd>
+			</dl>
+		</dd>
+	</dl>
+
+</fieldset>
+<nav class="slides">
+	@Ajax.ActionLink("Next", "Slide2", null, ajaxOptions, new { @class = "floatRight" })
+	@Html.ActionLink("Back", "Index", "Home", null, new { @class = "floatLeft" })
+</nav>

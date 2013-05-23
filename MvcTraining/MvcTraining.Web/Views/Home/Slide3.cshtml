@@ -1,0 +1,13 @@
+﻿@{
+	var ajaxOptions = new AjaxOptions() { UpdateTargetId = "mainArticle"};
+}
+
+<fieldset>
+	<legend>Project Structure</legend>
+
+
+</fieldset>
+<nav class="slides">
+	@Ajax.ActionLink("Next", "Slide4", null, ajaxOptions, new { @class = "floatRight" })
+	@Ajax.ActionLink("Back", "Slide2", null, ajaxOptions, new { @class = "floatLeft" })
+</nav>

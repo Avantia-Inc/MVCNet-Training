@@ -73,6 +73,8 @@ article.product {
 }
 .clear { clear: both; }
 .inline-block { display: inline-block; }
+.floatLeft { float: left; }
+.floatRight { float: right; }
 
 footer {
 	margin: 12px 106px;

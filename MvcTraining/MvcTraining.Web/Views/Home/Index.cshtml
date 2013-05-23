@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Mvc Training";
+	var ajaxOptions = new AjaxOptions() { UpdateTargetId = "mainArticle"};
+}
+
+<h2>Mvc Training</h2>
+
+<article id="mainArticle">
+	<ul>
+		<li>@Ajax.ActionLink("MVC is a Technology Agnostic Pattern", "Slide1", ajaxOptions)</li>
+		<li>@Ajax.ActionLink("Asp.Net MVC", "Slide2", ajaxOptions)</li>
+		<li>@Ajax.ActionLink("Project Structure", "Slide3", ajaxOptions)</li>
+		<li>@Ajax.ActionLink("Demo: Product Admin", "Slide4", ajaxOptions)</li>
+		<li>@Ajax.ActionLink("Demo: Scaffolding", "Slide5", ajaxOptions)</li>
+		<li>@Ajax.ActionLink("Demo: Registration", "Slide6", ajaxOptions)</li>
+		<li>@Ajax.ActionLink("Demo: Online Store", "Slide7", ajaxOptions)</li>
+	</ul>
+</article>
+
+@section scripts 
+{
+	@Scripts.Render("~/bundles/jqueryval")
+}
