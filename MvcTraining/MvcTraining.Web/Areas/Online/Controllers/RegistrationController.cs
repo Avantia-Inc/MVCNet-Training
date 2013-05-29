@@ -65,10 +65,10 @@ namespace MvcTraining.Web.Areas.Online.Controllers
 				if (createStatus == MembershipCreateStatus.Success)
 				{
 					FormsAuthentication.SetAuthCookie(createLogin.Username, true);
-					return RedirectToAction("Index", "Store");
+					return PartialView("_Success");
 				}
 				else
-					return View("Error"); 
+					return PartialView("Error"); 
 			}
 
 			return PartialView("_CustomerPassword", createLogin);
