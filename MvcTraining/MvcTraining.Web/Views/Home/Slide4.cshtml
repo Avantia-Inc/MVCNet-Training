@@ -5,7 +5,13 @@
 <fieldset>
 	<legend>Demo: Product Admin</legend>
 
-
+	<ul>
+		<li>@Html.ActionLink("Product Admin", "Index", "Product", new { area = "Admin" }, new { target = "_blank" })</li>
+		<li>Multiple Form Tags</li>
+		<li>Subviews</li>
+		<li>Ajax.ActionLink() && Ajax.BeginForm()</li>
+		<li>Binding</li>
+	</ul>
 </fieldset>
 <nav class="slides">
 	@Ajax.ActionLink("Next", "Slide5", null, ajaxOptions, new { @class = "floatRight" })

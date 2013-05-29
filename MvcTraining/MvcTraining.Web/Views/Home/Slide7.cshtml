@@ -5,7 +5,11 @@
 <fieldset>
 	<legend>Demo: Online Store</legend>
 
-
+	<ul>
+		<li>@Html.ActionLink("Online Store", "Index", "Store", new { area = "Online" }, new { target = "_blank" })</li>
+		<li>Display the same model with a different view</li>
+		<li>Responsive Design</li>
+	</ul>
 </fieldset>
 <nav class="slides">
 	@Html.ActionLink("Home", "Index", "Home", null, new { @class = "floatRight" })

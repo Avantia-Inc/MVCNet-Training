@@ -5,7 +5,11 @@
 <fieldset>
 	<legend>Demo: Registration</legend>
 
-
+	<ul>
+		<li>@Html.ActionLink("Registration", "Register", "Registration", new { area = "Online" }, new { target = "_blank" })</li>
+		<li>Routing</li>
+		<li>Ajax Wizard</li>
+	</ul>
 </fieldset>
 <nav class="slides">
 	@Ajax.ActionLink("Next", "Slide7", null, ajaxOptions, new { @class = "floatRight" })
