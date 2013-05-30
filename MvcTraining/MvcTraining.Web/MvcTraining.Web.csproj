@@ -211,9 +211,6 @@
     <Content Include="Areas\Admin\Views\Web.config" />
     <Content Include="Areas\Online\Views\Web.config" />
     <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\_List.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\_Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\_Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
