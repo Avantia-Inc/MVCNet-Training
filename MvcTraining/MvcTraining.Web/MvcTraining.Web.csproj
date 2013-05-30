@@ -225,6 +225,24 @@
     <Content Include="Areas\Admin\Views\Product\List.cshtml" />
     <Content Include="Areas\Online\Views\Login\Index.cshtml" />
     <Content Include="Areas\Online\Views\Registration\_Success.cshtml" />
+    <Content Include="CodeTemplates\AddController\ApiController.tt">
+      <LastGenOutput>ApiController.cs</LastGenOutput>
+    </Content>
+    <Content Include="CodeTemplates\AddController\ApiControllerWithContext.tt">
+      <LastGenOutput>ApiControllerWithContext.cs</LastGenOutput>
+    </Content>
+    <Content Include="CodeTemplates\AddController\Controller.tt">
+      <LastGenOutput>Controller.cs</LastGenOutput>
+    </Content>
+    <Content Include="CodeTemplates\AddController\ControllerWithContext.tt">
+      <LastGenOutput>ControllerWithContext.cs</LastGenOutput>
+    </Content>
+    <Content Include="CodeTemplates\AddView\CSHTML\Create.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\Delete.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\Details.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\Edit.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\Empty.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\List.tt" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -264,7 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CodeTemplates\AddView\CSHTML\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

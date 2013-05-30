@@ -22,6 +22,10 @@ namespace MvcTraining.Web
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
+#if DEBUG
+            //This field will automatically drop and rebuild the database when the code-first schema is changed
+            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<MvcTraining.Web.Models.MvcTrainingContext>());  
+#endif
 		}
 	}
 }
