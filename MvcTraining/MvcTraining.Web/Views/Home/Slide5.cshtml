@@ -3,14 +3,17 @@
 }
 
 <fieldset>
-	<legend>Demo: Scaffolding</legend>
+	<legend>Demo: Product Admin</legend>
 
 	<ul>
-		<li>C:\Program Files (x86)\Microsoft Visual Studio {version}\Common7\IDE\ItemTemplates\CSharp\Web\MVC 4\CodeTemplates</li>
-		<li>Can override by copying CodeTemplates folder into project</li>
+		<li>@Html.ActionLink("Product Admin", "Index", "Product", new { area = "Admin" }, new { target = "_blank" })</li>
+		<li>Multiple Form Tags</li>
+		<li>Subviews</li>
+		<li>Ajax.ActionLink() && Ajax.BeginForm()</li>
+		<li>Binding</li>
 	</ul>
 </fieldset>
 <nav class="slides">
-	@Ajax.ActionLink("Next", "Slide6", null, ajaxOptions, new { @class = "floatRight" })
-	@Ajax.ActionLink("Back", "Slide4", null, ajaxOptions, new { @class = "floatLeft" })
+	@Ajax.ActionLink("Next", "Slide5", null, ajaxOptions, new { @class = "floatRight" })
+	@Ajax.ActionLink("Back", "Slide3", null, ajaxOptions, new { @class = "floatLeft" })
 </nav>

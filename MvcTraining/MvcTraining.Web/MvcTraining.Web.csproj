@@ -275,8 +275,8 @@
     <Content Include="Views\Home\Slide1.cshtml" />
     <Content Include="Views\Home\Slide2.cshtml" />
     <Content Include="Views\Home\Slide3.cshtml" />
-    <Content Include="Views\Home\Slide4.cshtml" />
     <Content Include="Views\Home\Slide5.cshtml" />
+    <Content Include="Views\Home\Slide4.cshtml" />
     <Content Include="Views\Home\Slide6.cshtml" />
     <Content Include="Views\Home\Slide7.cshtml" />
   </ItemGroup>
