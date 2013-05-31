@@ -237,12 +237,14 @@
     <Content Include="CodeTemplates\AddController\ControllerWithContext.tt">
       <LastGenOutput>ControllerWithContext.cs</LastGenOutput>
     </Content>
-    <Content Include="CodeTemplates\AddView\CSHTML\Create.tt" />
     <Content Include="CodeTemplates\AddView\CSHTML\Delete.tt" />
     <Content Include="CodeTemplates\AddView\CSHTML\Details.tt" />
     <Content Include="CodeTemplates\AddView\CSHTML\Edit.tt" />
     <Content Include="CodeTemplates\AddView\CSHTML\Empty.tt" />
     <Content Include="CodeTemplates\AddView\CSHTML\List.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\Create.tt">
+      <LastGenOutput>Create.cshtml</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
